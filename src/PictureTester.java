@@ -17,6 +17,7 @@ public class PictureTester
     beach.explore();
   }
 
+  
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
@@ -25,6 +26,8 @@ public class PictureTester
     caterpillar.mirrorVertical();
     caterpillar.explore();
   }
+
+  
   
   /** Method to test mirrorTemple */
   public static void testMirrorTemple()
@@ -47,7 +50,8 @@ public class PictureTester
   public static void testEdgeDetection()
   {
     Picture swan = new Picture("swan.jpg");
-    swan.edgeDetection(10);
+    swan.explore();
+    swan.edgeDetection(20);
     swan.explore();
   }
 
@@ -129,12 +133,6 @@ public class PictureTester
     seagull.mirrorGull();
     seagull.explore();
   }
-  
-  public static void testMyCollage()  {
-    Picture canvas = new Picture("640x480.jpg");
-    canvas.myCollage();
-    canvas.explore();
-  }
 
   public static void testCopy()  {
     Picture canvas = new Picture("640x480.jpg");
@@ -142,6 +140,18 @@ public class PictureTester
     canvas.copy(beach, 0, 200, 0, 200, 0, 0);
     canvas.explore();
     canvas.copy(beach, 0, 400, 0, 400, 200, 200);
+    canvas.explore();
+  }
+  public static void testEdgeDetection2() {
+    Picture swan = new Picture("swan.jpg");
+    swan.explore();
+    swan.edgeDetection2(20);
+    swan.explore();
+  }
+
+  public static void testMyCollage()  {
+    Picture canvas = new Picture("640x480.jpg");
+    canvas.myCollage();
     canvas.explore();
   }
 
@@ -170,9 +180,9 @@ public class PictureTester
     // testMirrorDiagonal();
     // testCollage();
     // testCopy();
-    testMyCollage();
-    //testEdgeDetection();
-    //testEdgeDetection2();
+    // testMyCollage();
+    testEdgeDetection();
+    testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();
     //testGetCountRedOverValue(250);
